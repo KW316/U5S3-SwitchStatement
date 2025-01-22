@@ -1,7 +1,15 @@
 package partC;
 
 public class AlgoChallenge {
-        /* Problem 12
+    public static void main(String[] args) {
+        System.out.println(dogTrouble(true, true));
+        System.out.println( dogTrouble(false, false));
+        System.out.println(dogTrouble(true, false));
+        System.out.println(puppyCry(true, 6));
+        System.out.println(puppyCry(true, 7));
+        System.out.println(puppyCry(false, 6));
+    }
+    /* Problem 12
      It's a nice day, and you're at the park and see two dogs, bulldog and lab.
      The parameters bulldogGrowl and labGrowl indicates if each dog is growling.
      Surrounding people are in a bit of trouble if both dogs are growling or if neither are growling but are in a stare down.
@@ -15,8 +23,11 @@ public class AlgoChallenge {
     */
 
     public static Boolean dogTrouble(boolean bulldogGrowl, boolean labGrowl) {
-
-        return null;
+            if (bulldogGrowl && labGrowl){
+                return true;
+            }else if(!bulldogGrowl && !labGrowl){
+                return true;}
+        return false;
     }
 
     /* Problem 13
@@ -32,7 +43,11 @@ public class AlgoChallenge {
      */
 
     public static Boolean puppyCry(boolean crying, int hour) {
-
-        return null;
+        if((hour < 20 && hour >= 7)){
+            return false;
+        }else if((crying == false) && (hour > 20 || hour < 7)){
+            return false;
+        }
+        return true;
     }
 }
